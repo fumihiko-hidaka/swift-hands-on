@@ -10,11 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var changeButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        changeButton.addTarget(
+            self,
+            action: #selector(self.changeEvent(sender:)),
+            for: .touchUpInside
+        )
     }
 
+    @objc func changeEvent(sender: Any) {
+        print("🍣")
+    }
 
 }
 

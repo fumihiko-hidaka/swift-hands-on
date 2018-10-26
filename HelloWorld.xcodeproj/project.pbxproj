@@ -14,6 +14,8 @@
 		6440BFAA21835C5E00523CB8 /* StoryBoards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6440BFA921835C5E00523CB8 /* StoryBoards.swift */; };
 		6440BFB22183708900523CB8 /* HelloWorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6440BFB12183708900523CB8 /* HelloWorldViewController.swift */; };
 		6440BFB4218370A400523CB8 /* HelloWorldStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6440BFB3218370A400523CB8 /* HelloWorldStoryboard.storyboard */; };
+		6440BFBE21837E1300523CB8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6440BFBC21837E1300523CB8 /* RxCocoa.framework */; };
+		6440BFBF21837E1300523CB8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6440BFBD21837E1300523CB8 /* RxSwift.framework */; };
 		66F4D0811FA6780C4547FAA5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 66F4D87F9D7A42A3626C8362 /* .gitignore */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		6440BFA921835C5E00523CB8 /* StoryBoards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoards.swift; sourceTree = "<group>"; };
 		6440BFB12183708900523CB8 /* HelloWorldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldViewController.swift; sourceTree = "<group>"; };
 		6440BFB3218370A400523CB8 /* HelloWorldStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HelloWorldStoryboard.storyboard; sourceTree = "<group>"; };
+		6440BFBC21837E1300523CB8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		6440BFBD21837E1300523CB8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		66F4D87F9D7A42A3626C8362 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6440BFBE21837E1300523CB8 /* RxCocoa.framework in Frameworks */,
+				6440BFBF21837E1300523CB8 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +53,7 @@
 				6440BF9021834D9600523CB8 /* HelloWorld */,
 				6440BF8F21834D9600523CB8 /* Products */,
 				66F4D87F9D7A42A3626C8362 /* .gitignore */,
+				6440BFBB21837E1300523CB8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +136,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6440BFBB21837E1300523CB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6440BFBC21837E1300523CB8 /* RxCocoa.framework */,
+				6440BFBD21837E1300523CB8 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +155,7 @@
 				6440BF8A21834D9600523CB8 /* Sources */,
 				6440BF8B21834D9600523CB8 /* Frameworks */,
 				6440BF8C21834D9600523CB8 /* Resources */,
+				6440BFC021837FA400523CB8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -195,6 +212,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6440BFC021837FA400523CB8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6440BF8A21834D9600523CB8 /* Sources */ = {
@@ -343,6 +382,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -360,6 +403,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

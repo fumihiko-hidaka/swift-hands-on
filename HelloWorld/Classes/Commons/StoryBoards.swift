@@ -38,7 +38,7 @@ enum StoryboardScene {
         )
     }
     enum HelloWorldViewController: StoryboardType {
-        static let storyboardName = "HelloWorld"
+        static let storyboardName = "HelloWorldStoryboard"
         static let initialScene = InitialSceneType<HelloWorld.HelloWorldViewController>(
             storyboard: HelloWorldViewController.self
         )

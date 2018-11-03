@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import APIKit
 import RxSwift
 import RxCocoa
 
@@ -23,26 +23,26 @@ class ViewController: UIViewController {
         changeButton.rx.tap.asDriver().drive(
             onNext: { [weak self] _ in
                 print("🍤")
-                
+
                 let vc = StoryboardScene.HelloWorldViewController.initialScene.instantiate()
                 self?.navigationController?.pushViewController(vc, animated: true)
             }
         ).disposed(by: bag)
-        
-        /*
-        changeButton.addTarget(
-            self,
-            action: #selector(self.changeEvent(sender:)),
-            for: .touchUpInside
-        )
-        */
-    }
 
-    /*
-    @objc func changeEvent(sender: Any) {
-        print("🍣")
+        let request = GetRateLimitRequest()
+
+        Session.send(request) { result in
+            switch result {
+            case .success(let rateLimit):
+                print("count: \(rateLimit.count)")
+                print("reset: \(rateLimit.resetDate)")
+
+            case .failure(let error):
+                print("error: \(error)")
+            }
+        }
+
     }
-    */
 
 }
 

@@ -6,9 +6,7 @@
 import Foundation
 import APIKit
 
-//: Step 1: Define request protocol
 protocol GitHubRequest: Request {
-
 }
 
 extension GitHubRequest {

@@ -20,8 +20,10 @@
 		6440BFC62184425000523CB8 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6440BFC52184425000523CB8 /* Result.framework */; };
 		66F4D0811FA6780C4547FAA5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 66F4D87F9D7A42A3626C8362 /* .gitignore */; };
 		66F4D14C5B0B17F8264C6C82 /* RateLimitEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4D617081C7535B8736FEA /* RateLimitEntity.swift */; };
+		66F4D7180A95CC3B08CA8B1E /* VisionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4DB156701CF4393CC9415 /* VisionRequest.swift */; };
 		66F4D882A9DD25A1EDD0D58A /* GithubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4D50741A65B04023901AE /* GithubRequest.swift */; };
 		66F4DEF7EAF8F8B0758AF197 /* RateLimitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4DC2179F1C1A30AA985CA /* RateLimitRequest.swift */; };
+		66F4DFFA2890E792FC4C7BF1 /* GoogleVisionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4D5B2FE561E3725E86BDE /* GoogleVisionEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +42,10 @@
 		6440BFC52184425000523CB8 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		64BC2E052184684A00AC2EA1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		66F4D50741A65B04023901AE /* GithubRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRequest.swift; sourceTree = "<group>"; };
+		66F4D5B2FE561E3725E86BDE /* GoogleVisionEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleVisionEntity.swift; sourceTree = "<group>"; };
 		66F4D617081C7535B8736FEA /* RateLimitEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateLimitEntity.swift; sourceTree = "<group>"; };
 		66F4D87F9D7A42A3626C8362 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
+		66F4DB156701CF4393CC9415 /* VisionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisionRequest.swift; path = Google/VisionRequest.swift; sourceTree = "<group>"; };
 		66F4DC2179F1C1A30AA985CA /* RateLimitRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateLimitRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				66F4D617081C7535B8736FEA /* RateLimitEntity.swift */,
+				66F4D5B2FE561E3725E86BDE /* GoogleVisionEntity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				66F4D00FE921430DBCA6AF11 /* Github */,
+				66F4DB156701CF4393CC9415 /* VisionRequest.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -301,6 +307,8 @@
 				66F4D882A9DD25A1EDD0D58A /* GithubRequest.swift in Sources */,
 				66F4DEF7EAF8F8B0758AF197 /* RateLimitRequest.swift in Sources */,
 				66F4D14C5B0B17F8264C6C82 /* RateLimitEntity.swift in Sources */,
+				66F4DFFA2890E792FC4C7BF1 /* GoogleVisionEntity.swift in Sources */,
+				66F4D7180A95CC3B08CA8B1E /* VisionRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
